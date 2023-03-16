@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="91dp">
+
+    <Button
+        android:id="@+id/startEndBtn"
+        android:layout_width="146dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="460dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#000000"
+        android:text="@string/start_end_btn"
+        app:layout_constraintBottom_toTopOf="@+id/data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/showListBtn"
+        app:layout_constraintHorizontal_bias="0.759"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/showListBtn"
+        android:layout_width="146dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#000000"
+        android:text="@string/visualList"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/data"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/data"
+        android:layout_width="match_parent"
+        android:layout_height="1037dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/profilePicture"
+            android:layout_width="397dp"
+            android:layout_height="386dp"
+            android:layout_marginTop="88dp"
+            android:contentDescription="main picture"
+            android:src="@drawable/s313"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="172dp"
+            android:layout_height="41dp"
+            android:layout_marginBottom="187dp"
+            android:gravity="center"
+            android:text="@string/name"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:autoSizeTextType="uniform"
+            app:fontFamily="sans-serif"
+            app:layout_constraintBottom_toTopOf="@+id/helloMsg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/patrolName"
+            android:layout_width="111dp"
+            android:layout_height="39dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="316dp"
+            android:gravity="center"
+            android:text="@string/patrol_name"
+            android:textColor="#FFFEFE"
+            android:textStyle="bold"
+            app:autoSizeTextType="uniform"
+            app:fontFamily="sans-serif"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="131dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/date"
+            android:textColor="#FFFEFE"
+            app:autoSizeTextType="uniform"
+            app:fontFamily="sans-serif"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/helloMsg"
+            android:layout_width="411dp"
+            android:layout_height="85dp"
+            android:layout_marginBottom="232dp"
+            android:gravity="center"
+            android:text="@string/hello"
+            android:textColor="#f54242"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.514"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/patrolPicture"
+            android:layout_width="111dp"
+            android:layout_height="113dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="13dp"
+            android:contentDescription="patrol avatar"
+            app:layout_constraintBottom_toTopOf="@+id/patrolName"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <EditText
+            android:id="@+id/userId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginBottom="84dp"
+            android:ems="10"
+            android:hint="@string/inputLabel"
+            android:inputType="number"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/helloMsg"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/enterInputId"
+            android:layout_width="103dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="72dp"
+            android:layout_marginBottom="76dp"
+            android:backgroundTint="#000000"
+            android:text="@string/enterIdBtn"
+            app:layout_constraintBottom_toTopOf="@+id/helloMsg"
+            app:layout_constraintEnd_toStartOf="@+id/patrolPicture"
+            app:layout_constraintStart_toEndOf="@+id/userId" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="697dp"
+            android:layout_height="804dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toStartOf="@+id/patrolName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableLayout
+                android:id="@+id/visualList"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="24dp"
+                android:background="#ffffff"
+                android:padding="16dp"
+                android:stretchColumns="*"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- Table header row -->
+                <TableRow>
+
+                    <TextView
+                        android:background="#A2DFFB"
+                        android:padding="8dp"
+                        android:text="USER ID"
+                        android:textStyle="bold"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:background="#A2DFFB"
+                        android:padding="8dp"
+                        android:text="NAME"
+                        android:textStyle="bold"
+                        app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:background="#A2DFFB"
+                        android:padding="8dp"
+                        android:text="ACTIONS"
+                        android:textStyle="bold"
+                        app:fontFamily="sans-serif" />
+                </TableRow>
+
+                <!-- Add more rows here as needed -->
+
+            </TableLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Attendance</string>
+    <string name="start_end_btn">Begin Attendance</string>
+    <string name="welcome">PLEASE SCAN YOUR ID</string>
+    <string name="name"></string>
+    <string name="inputLabel">ID #</string>
+    <string name="user_label">User ID:</string>
+    <string name="discord_label">Discord ID:</string>
+    <string name="user"></string>
+    <string name="discordId"></string>
+    <string name="date"></string>
+    <string name="hello">WELCOME</string>
+    <string name="patrol_name"></string>
+    <string name="enterIdBtn">Submit</string>
+    <string name="visualList">Open List</string>
+</resources>
