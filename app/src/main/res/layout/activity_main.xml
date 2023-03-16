@@ -10,6 +10,18 @@
     tools:layout_editor_absoluteY="91dp">
 
     <Button
+        android:id="@+id/showListBtn"
+        android:layout_width="146dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#000000"
+        android:text="@string/visualList"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/data"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
         android:id="@+id/startEndBtn"
         android:layout_width="146dp"
         android:layout_height="59dp"
@@ -143,39 +155,60 @@
             app:layout_constraintEnd_toStartOf="@+id/patrolPicture"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/userId" />
-        <TableLayout
-            android:id="@+id/visualList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:stretchColumns="*"
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="359dp"
+            android:layout_height="457dp"
+            android:layout_marginTop="16dp"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.692"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <!-- Table header row -->
-            <TableRow>
+            <TableLayout
+                android:id="@+id/visualList"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="24dp"
+                android:background="#ffffff"
+                android:padding="16dp"
+                android:stretchColumns="*"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:padding="8dp"
-                    android:text="User ID"
-                    android:textStyle="bold" />
+                <!-- Table header row -->
+                <TableRow>
 
-                <TextView
-                    android:padding="8dp"
-                    android:text="Name"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:background="#A2DFFB"
+                        android:padding="8dp"
+                        android:text="USER ID"
+                        android:textStyle="bold"
+                        app:fontFamily="sans-serif" />
 
-                <TextView
-                    android:padding="8dp"
-                    android:text="Actions"
-                    android:textStyle="bold" />
-            </TableRow>
+                    <TextView
+                        android:background="#A2DFFB"
+                        android:padding="8dp"
+                        android:text="NAME"
+                        android:textStyle="bold"
+                        app:fontFamily="sans-serif" />
 
-            <!-- Add more rows here as needed -->
+                    <TextView
+                        android:background="#A2DFFB"
+                        android:padding="8dp"
+                        android:text="ACTIONS"
+                        android:textStyle="bold"
+                        app:fontFamily="sans-serif" />
+                </TableRow>
 
-        </TableLayout>
+                <!-- Add more rows here as needed -->
+
+            </TableLayout>
+
+        </ScrollView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 //input users in database
                 if(listOfCheckIn.size() != 0){
                     database.getReference("Events").child(LocalDate.now().toString()).setValue(User.idList);
-                    startDiscordFunctions();
+                   startDiscordFunctions();
 
                 }
             }
@@ -98,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
                 binding.name.setVisibility(View.INVISIBLE);
                 binding.patrolName.setVisibility(View.INVISIBLE);
                 binding.patrolPicture.setVisibility(View.INVISIBLE);
+                binding.profilePicture.setVisibility(View.INVISIBLE);
             } else {
                 binding.scrollView.setVisibility(View.INVISIBLE);
                 binding.showListBtn.setText("Open List");
@@ -107,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 binding.name.setVisibility(View.VISIBLE);
                 binding.patrolName.setVisibility(View.VISIBLE);
                 binding.patrolPicture.setVisibility(View.VISIBLE);
+                binding.profilePicture.setVisibility(View.VISIBLE);
             }
         });
     }
